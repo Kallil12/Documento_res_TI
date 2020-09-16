@@ -61,12 +61,12 @@
 \providecommand{\imprimirprograma}{}
 \newcommand{\programa}[1]{\renewcommand{\imprimirprograma}{#1}}
 
-\titulo{Painel em Python para o Centro de Inteligência}
-\autor{Kallil de Araújo Bezerra}
+\titulo{Título}
+\autor{Autor}
 \local{Natal-RN, Brasil}
 \data{\the\year}
-\orientador{Elias Jacob}
-%\coorientador{Nome do coorientador}
+\orientador{Nome do orientador}
+\coorientador{Nome do coorientador}
 \universidade{Universidade Federal do Rio Grande do Norte}
 \centro{Instituto Metrópole Digital}
 \programa{Programa de Residência em Tecnologia da Informação}
@@ -189,7 +189,7 @@
    Trabalho aprovado. \imprimirlocal, \today:
 
    \assinatura{\textbf{\imprimirorientador} \\ Orientador}
-   %\assinatura{\textbf{\imprimircoorientador} \\ Coorientador} 
+   \assinatura{\textbf{\imprimircoorientador} \\ Coorientador} 
    \assinatura{\textbf{Professor} \\ Examinador}
    \assinatura{\textbf{Professor} \\ Examinador}
       
@@ -214,7 +214,7 @@
 
 % Agradecimentos
 \begin{agradecimentos}
-Agradeço à minha família e também aos meus colegas residentes da Justiça Federal do Rio Grande do Norte que sempre me ajudaram e com quem eu tive a grande honra de aprender tanto.
+Agradecimentos
 \end{agradecimentos}
 
 % Epígrafe
@@ -230,9 +230,9 @@ Agradeço à minha família e também aos meus colegas residentes da Justiça Fe
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
 \vspace{\onelineskip}
-Há algumas décadas organizações governamentais e não governamentais já tomam decisões usando dados colhidos através de pesquisas internas e externas, porém, a capacidade de trabalhar com dados hoje é muito superior aos anos passados, atualmente existem análises mais poderosas que podem ser feitas graças aos computadores mais potentes e a infraestrutura de Tecnologia de Informação mais madura. Além disso, com o mundo digital também veio a necessidade de aumentar a velocidade da tomada de decisões, e nesse contexto a visualização de dados se torna importante porque pode mostrar de forma rápida o que está acontecendo com as variáveis de interesse, e como elas se comportam em relação àos outros pontos de interesse.
+O resumo deve apresentar de forma concisa os pontos relevantes de um texto, fornecendo uma visão rápida e clara do conteúdo e das conclusões do trabalho. O texto, redigido na forma impessoal do verbo, é constituído de uma sequência de frases concisas e objetivas e não de uma simples enumeração de tópicos, seguido, logo abaixo, das palavras representativas do conteúdo do trabalho, isto é, palavras-chave e/ou descritores. Por fim, deve-se evitar, na redação do resumo, o uso de parágrafos (em geral resumos são escritos em parágrafo único), bem como de fórmulas, equações, diagramas e símbolos, optando-se, quando necessário, pela transcrição na forma extensa, além de não incluir citações bibliográficas.
 
-\noindent\textbf{Palavras-chave}: Visualização de dados. Análise de dados. Estatística.
+\noindent\textbf{Palavras-chave}: Palavras-chave separadas por ponto.
 \end{resumo}
 
 % Resumo em inglês
@@ -241,12 +241,19 @@ Há algumas décadas organizações governamentais e não governamentais já tom
 \begin{otherlanguage*}{english}
 O resumo em língua estrangeira (em inglês Abstract, em espanhol Resumen, em francês Résumé) é uma versão do resumo escrito na língua vernácula para idioma de divulgação internacional. Ele deve apresentar as mesmas características do anterior (incluindo as mesmas palavras, isto é, seu conteúdo não deve diferir do resumo anterior), bem como ser seguido das palavras representativas do conteúdo do trabalho, isto é, palavras-chave e/ou descritores, na língua estrangeira. Embora a presente especificação considere o inglês como língua estrangeira (o mais comum), não fica impedida a adoção de outras línguas (a exemplo de espanhol ou francês) para redação do resumo em língua estrangeira.
 
-\noindent\textbf{Keywords}: Data visualization. Data analysis. Statistics.
+\noindent\textbf{Keywords}: Keywords separated by dots.
 \end{otherlanguage*}
 \end{resumo}
 
 % Resumo em francês 
+\begin{resumo}[Résumé]
+\vspace{\onelineskip}
+\begin{otherlanguage*}{french}
+O resumo em língua estrangeira (em inglês Abstract, em espanhol Resumen, em francês Résumé) é uma versão do resumo escrito na língua vernácula para idioma de divulgação internacional. Ele deve apresentar as mesmas características do anterior (incluindo as mesmas palavras, isto é, seu conteúdo não deve diferir do resumo anterior), bem como ser seguido das palavras representativas do conteúdo do trabalho, isto é, palavras-chave e/ou descritores, na língua estrangeira. Embora a presente especificação considere o inglês como língua estrangeira (o mais comum), não fica impedida a adoção de outras línguas (a exemplo de espanhol ou francês) para redação do resumo em língua estrangeira.
 
+\noindent\textbf{Mots-clés}: Mots-clés séparés par points.
+\end{otherlanguage*}
+\end{resumo}
 
 % Inserir lista de ilustrações
 \pdfbookmark[0]{\listfigurename}{lof}
@@ -267,7 +274,6 @@ O resumo em língua estrangeira (em inglês Abstract, em espanhol Resumen, em fr
 \begin{siglas}
   \item[IMD] Instituto Metrópole Digital
   \item[UFRN] Universidade Federal do Rio Grande do Norte
-  \item[JFRN] Justiça Federal do Rio Grande do Norte
 \end{siglas}
 
 % Inserir lista de símbolos
@@ -298,14 +304,6 @@ O resumo em língua estrangeira (em inglês Abstract, em espanhol Resumen, em fr
 
 % APENDICES (apendices.tex)
 % Pode-se ter múltiplos arquivos, um para cada apêndice
-%\begin{apendicesenv}
-%\input{apendices}
-%\end{apendicesenv}
 
-% ANEXOS (anexos.tex)
-% Pode-se ter múltiplos arquivos, um para cada apêndice
-%\begin{anexosenv}
-%\input{anexos}
-%\end{anexosenv}
 
 \end{document}

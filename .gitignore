@@ -3,3 +3,10 @@
 *.toc
 *.log
 *.aux
+*.lot
+*.bbl
+*.blg
+*.brf
+*.idx
+*.lof
+*.loq

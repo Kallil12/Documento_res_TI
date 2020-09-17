@@ -5,11 +5,4 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.7 }
 
-\bibitem[Araujo 2015]{abntex2classe}
-\abntrefinfo{Araujo}{ARAUJO}{2015}
-{ARAUJO, L.~C. \emph{A classe abntex2: Modelo can{\^o}nico de trabalhos
-  acad{\^e}micos brasileiros compat{\'\i}vel com as normas ABNT NBR 14724:2011,
-  ABNT NBR 6024:2012 e outras}.
-[S.l.], 2015. Dispon{\'\i}vel em: \url{http://www.abntex.net.br/}.}
-
 \end{thebibliography}

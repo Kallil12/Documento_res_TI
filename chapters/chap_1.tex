@@ -1,8 +1,8 @@
-\chapter{Conceitos de Business Intelligence}\label{cap_trabalho_academico}
+\chapter{Introdução ao BI}\label{cap_trabalho_academico}
 
 % https://www.researchgate.net/publication/273861123_Why_Business_Intelligence_Significance_of_Business_Intelligence_Tools_and_Integrating_BI_Governance_with_Corporate_Governance
 
-De forma geral o termo \textit{Business Intelligence} (BI) ainda não é bem definido na literatura, mas alguns dos principais estudiosos da área, como Solomon Negash, apresentam o BI como um sistema que combina dados operacionais com ferramentas analíticas para apresentar informações para os gerentes do negócio. O objetivo disso é melhorar a qualidade das decisões do processo, tornando-as melhor embasadas, então os métodos do BI podem ser usados para melhor entender o estado da empresa, organização ou órgão onde estiver sendo aplicado, resultando em melhores decisões. Apesar disso, ainda existe bastante empresa que emprega o BI num viés muito mais ligado à gestão, sem exigir muito conhecimento da parte de tecnologia da informação, e usando conceitos sobre mercado, marketing, administração da produção etc. 
+De forma geral, o termo \textit{Business Intelligence} (BI) ainda não é bem definido na literatura, mas alguns dos principais estudiosos da área, como Solomon Negash, apresentam o BI como um sistema que combina dados operacionais com ferramentas analíticas para apresentar informações para os gerentes do negócio. O objetivo disso é melhorar a qualidade das decisões do processo, tornando-as melhor embasadas, então os métodos do BI podem ser usados para melhor entender o estado da empresa, organização ou órgão onde estiver sendo aplicado, resultando em melhores decisões. Apesar disso, ainda existe bastante empresa que emprega o BI num viés muito mais ligado à gestão, sem exigir muito conhecimento da parte de tecnologia da informação, e usando conceitos sobre mercado, marketing, administração da produção etc. 
 
 Nesse trabalho serão usados os conceitos que se aproximam mais ao que Negash apresenta como BI, e dentro do que ele define como sendo importante na Inteligência de Negócios podemos citar algumas áreas do conhecimento como:
 
@@ -12,5 +12,32 @@ Nesse trabalho serão usados os conceitos que se aproximam mais ao que Negash ap
 	\item Mineração de dados
 	\item \textit{Online Analytic Processing} (OLAP)
 	\item Gerenciamento do conhecimento
+	\item Probabilidade
+	\item Estatística
+	\item Análises preditivas
+	\item Detecção de anomalias
 \end{itemize}
 
+\section{Estrutura básica do BI}
+
+Como foi apresentado anteriormente, o BI serve para auxiliar nas tomadas de decisão, e isso é alcançado usando os dados da empresa ou órgão em que estiver sendo empregado. Os dados são armazenados em \textit{Data Warehouses}, que são armazéns de dados, em tradução livre, esses armazéns guardam dados históricos, então a partir deles é possível analisar o desenvolvimento de variáveis importantes e o comportamento delas de acordo ao passar dos anos e tentar estabelecer padrões, isso por si só já poderia ser usado para prever possíveis mudanças em estratégia de negócios. 
+
+Após o armazém, os dados devem ser coletados e limpos, a limpeza corresponde a remoção de linhas erradas, que contenham dados ou errados ou faltosos, que podem atrapalhar na análise e apresentação ao gestor. Em seguida, os dados são apresentados à pessoa do negócio, que a partir das suas análises irá tomar alguma decisão que afeta a estratégia da empresa. Com alguma sorte essa decisão será pautada em matemática, estatística e informações úteis, sendo bem embasada em dados e números.
+
+De forma resumida, o BI usa o Data Warehouse para guardar os dados, usa um conjunto de ferramentas e técnicas para limpar e extrair os dados, essa técnica também é conhecida como \textit{Extraction, Transform, Load} (ETL), e ,finalmente, apresenta gráficos que mostram o comportamento de variáveis de interesse da empresa para o gestor, que a partir disso escolhe alguma estratégia para os rumos da empresa/órgão/setor que gerencia.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.80]{./figures/cap1/resumo_bi.png}
+	\caption{Resumo de um sistema BI}
+\end{figure}
+
+Isso tudo que foi tratado acima corresponde às etapas do processamento de dados estruturados, ou seja, dados que podem ser organizados e categorizados em linhas e colunas, e que, muitas vezes, possuem relações entre si. O processo para "manusear" dados não estruturados é um pouco diferente porque eles não são tão bem organizados, e alguns passos precisam ser inseridos nesse caminho para que eles sejam apresentados e tratados da melhor forma, evitando distorções.
+
+\section{Visualização de dados no BI}
+
+Todas as etapas do processo são importantes, mas o gestor só enxerga o último estágio: a visualização, e as decisões serão tomadas a partir das conclusões tiradas da visualização, portanto, a visualização precisa de um cuidado especial, o visual é importante porque ele pode levar a conclusões erradas, então é necessário ter atenção com as cores, os eixos entre outros detalhes. Mais adiante serão abordados mais características da visualização de dados.
+
+\section{Softwares de BI}
+
+LISTAR QLIKVIEW, TABLEAU, PENTAHO, POWER BI, E PYTHON

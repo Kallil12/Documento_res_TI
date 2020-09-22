@@ -1,4 +1,4 @@
-\chapter{A construção do painel}\label{cap_trabalho_academico}
+\chapter{Construção do painel}\label{cap_trabalho_academico}
 
 Antes de avançar para a parte técnica, é importante explicar o que é o Centro de Inteligência da JFRN e como um painel poderia ajudar na tarefa deles.
 
@@ -59,9 +59,9 @@ Primeiro, há uma análise da média ($\overline{x}$) de Assuntos que entraram n
 
 As variáveis são:
 \begin{itemize}
-	\item $anom_2$ que é a média mais duas vezes o desvio padrão, definida como: $$anom_2 = \overline{x} + 2*\sigma$$
+	\item $anom_2$ que é a média mais duas vezes o desvio padrão, definida como: $$anom_2 = media_{assuntos} + (2*\sigma)$$
 	
-	\item $anom_1$ que é a média mais uma vez o desvio padrão, definida como: $$anom_1 = \overline{x} + \sigma$$
+	\item $anom_1$ que é a média mais o desvio padrão, definida como: $$anom_1 = media_{assuntos} + \sigma$$
 	
 	\item $media_{assuntos}$ que é a média simples dos assuntos, a cada dois anos:
 	$$media_{assuntos} = \sum\limits_{ano}^{ano-1}\frac{assuntos}{total_{meses}}$$
@@ -80,3 +80,22 @@ Com essas variáveis encontradas, a distribuição das cores segue as regras a s
 
 \section{Bibliotecas usadas}
 
+Para construir o painel é necessário usar diferentes funções que estão abrigadas em bibliotecas distintas, então para conseguir montar tudo foram usados o Dash, Pandas, Numpy e Plotly. 
+
+\begin{itemize}
+	\item Dash - construção do visual
+	\item Plotly - construção de algumas partes gráficas
+	\item Pandas - análise e ajustes dos dados
+\end{itemize}
+
+\subsection{Plotly e Dash}
+
+A Plotly é uma empresa canadense que desenvolve ferramentas para análise e visualização de dados. Os serviços essenciais são gratuitos, basta carregar a biblioteca no programa e começar a usar, isso vale para o \textit{plotly graph objects} por exemplo, que gera gráficos interativos, e também vale para o Dash, que é um dos seus principais produtos. 
+
+Plotly além de ser o nome da empresa, também é o nome da ferramenta de visualização de dados. Ela foi usada nas primeiras versões do painel, mas como a visualização passou a se concentrar nas tabelas, acabou saindo da versão atual.
+
+A biblioteca Dash é um \textit{framework} usado para construir aplicações web que apresentem um visual simples de se configurar e que sirva para análises de dados, não é necessário (porém ajuda bastante) conhecer \textit{html} ou outras tecnologias de \textit{front-end} para montar um painel. O resultado pode ser distribuído pela internet, usando serviços como o \textit{Heroku}, de forma gratuita.
+
+\subsection{Pandas}
+
+O Pandas é essencial na execução do painel, ele carrega as ferramentas necessárias para a manipulação dos dados, como a seleção correta do Órgão Julgador escolhido, e o ano a ser visualizado. Além disso, ele também é responsável por montar os \textit{dataframes}, que são estruturas de dados, que servem de base para as tabelas e as avaliações por cores que é mostrada na visualização final.

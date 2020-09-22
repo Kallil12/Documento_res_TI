@@ -5,4 +5,22 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.7 }
 
+\bibitem[Mehta 2020]{medium1}
+\abntrefinfo{Mehta}{MEHTA}{2020}
+{MEHTA, I. \emph{Python-Dash data visualization dashboard template}. 2020.
+Dispon{\'\i}vel em:
+  \url{https://medium.com/analytics-vidhya/python-dash-data-visualization-dashboard-template-6a5bff3c2b76}.
+  Acesso em: 20 ago. 2020.}
+
+\bibitem[Negash 2015]{negash1}
+\abntrefinfo{Negash}{NEGASH}{2015}
+{NEGASH, S. Business intelligence.
+\emph{Communications of the Association for Information Systems}, v.~1, n.~1,
+  p. 177--195, 2015.}
+
+\bibitem[Wilke 2019]{claus1}
+\abntrefinfo{Wilke}{WILKE}{2019}
+{WILKE, C.~O. \emph{Fundamentals of Data Visualization}. [S.l.]: Ceira -
+  Coimbra, 2019.}
+
 \end{thebibliography}

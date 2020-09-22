@@ -55,11 +55,28 @@ A partir da escolha do Ano e do Órgão Julgador, o painel irá fazer as anális
 
 A detecção de anomalias é, basicamente, uma técnica (ou um conjunto de técnicas) que servem para identificar comportamentos que fogem do que é esperado. Um dos desafios do trabalho foi encontrar uma forma de se detectar os Assuntos que possuíssem alta frequência de entrada na JFRN, porque, teoricamente, cada Ano e cada Vara possuem diferentes distribuições de probabilidade, e um modelo de detecção de anomalia que se encaixa bem em um determinado período, pode não se encaixar em outros. São 15 órgãos julgadores diferentes, e os anos que podem ser consultados são de 2014 até 2020, então são 90 distribuições diferentes. Portanto, usamos uma abordagem simples mas eficaz.
 
+Primeiro, há uma análise da média ($\overline{x}$) de Assuntos que entraram na Vara, essa análise leva em conta o ano selecionado e o ano anterior, após isso, o desvio padrão ($\sigma$) é calculado e novas variáveis são geradas.
+
+As variáveis são:
+\begin{itemize}
+	\item $anom_2$ que é a média mais duas vezes o desvio padrão, definida como: $$anom_2 = \overline{x} + 2*\sigma$$
+	
+	\item $anom_1$ que é a média mais uma vez o desvio padrão, definida como: $$anom_1 = \overline{x} + \sigma$$
+	
+	\item $media_{assuntos}$ que é a média simples dos assuntos, a cada dois anos:
+	$$media_{assuntos} = \sum\limits_{ano}^{ano-1}\frac{assuntos}{total_{meses}}$$
+\end{itemize}
+
+Com essas variáveis encontradas, a distribuição das cores segue as regras a seguir, em que $total$ significa a quantidade total de Assuntos de determinada categoria:
+
 \begin{equation}
 	F_{cores} =
 	\begin{cases}
 		Vermelho & \text{se $total \geq anom_2$}\\
 		Amarelo & \text{se $total \geq anom_1 \;e\; total < anom_2$}\\
-		Verde & \text{se $total \geq media \;e\; total < anom_1$}
+		Verde & \text{se $total \geq media_{assuntos} \;e\; total < anom_1$}
 	\end{cases}       
 \end{equation}
+
+\section{Bibliotecas usadas}
+

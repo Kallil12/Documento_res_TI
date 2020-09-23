@@ -15,33 +15,22 @@ De acordo com um estudo feito por C. Willen \cite{willen1}, as estratégias do B
 	\item Criação de relatórios com métricas dos negócios
 \end{itemize}
 
-Nessa lista fica claro que o BI é muito importante para entender o comportamento interno da empresa em que for aplicado, e isso é importante para alocar ou realocar recursos para áreas mais importantes ou que estejam sob alta demanda.
+Nessa lista fica claro que o BI é muito importante para entender o comportamento interno da empresa em que for aplicado, as conclusões são usadas para alocar ou realocar recursos para áreas mais importantes ou que estejam sob alta demanda.
 
 \section{BI na Justiça Federal do RN}
 
 Na JFRN o BI é importante para entender o que está acontecendo nas diferentes Varas. O software usado é o Qlikview, que é capaz de montar gráficos e consultas a partir do banco de dados fornecido pelo Tribunal Regional Federal da $5^{a}$ região (TRF5), a distribuição dele é feita pelo portal BI do TRF5.
 
-Nesse portal existem diferentes painéis, atendendo demandas distintas. O processo de se desenvolver painéis nessa plataforma e nesse modo de distribuição demanda uma quantidade considerável de tempo, e um certo nível de burocracia, pois precisam de documentos que autorizem o desenvolvimento e publicação, que são emitidos pelo TRF5. Esse é um ponto negativo para o desenvolvimento do BI, porque o objetivo dos painéis é, justamente, trazer agilidade para a tomada de decisões, então uma forma mais rápida de se desenvolver painéis, mesmo que sejam mais simples, seria uma boa ferramenta para atender às diferentes Varas e demandas específicas da JFRN.
+Nesse portal existem diferentes painéis, atendendo demandas distintas. O processo de se desenvolver painéis nessa plataforma e nesse modo de distribuição demanda uma quantidade considerável de tempo, e um certo nível de burocracia, pois precisam de documentos que autorizem o desenvolvimento e publicação, que são emitidos pelo TRF5. Esse é um ponto negativo para o desenvolvimento do BI, porque o objetivo dos painéis é, justamente, trazer agilidade para a tomada de decisões e refletir melhor a realidade de onde estiver implementado, então uma forma mais rápida de se desenvolver painéis, mesmo que sejam mais simples, seria uma boa ferramenta para atender às diferentes Varas e demandas específicas da JFRN.
 
 
-
-\begin{itemize}
-	\item \textit{Data Warehouse}
-	\item Visualização
-	\item Mineração de dados
-	\item \textit{Online Analytic Processing} (OLAP)
-	\item Gerenciamento do conhecimento
-	\item Probabilidade
-	\item Estatística
-	\item Análises preditivas
-	\item Detecção de anomalias
-\end{itemize}
 
 \section{Estrutura básica do BI}
 
-Como foi apresentado anteriormente, o BI serve para auxiliar nas tomadas de decisão, e isso é alcançado usando os dados da empresa ou órgão em que estiver sendo empregado. Os dados são armazenados em \textit{Data Warehouses}, que são armazéns de dados, em tradução livre, esses armazéns guardam dados históricos, então a partir deles é possível analisar o desenvolvimento de variáveis importantes e o comportamento delas de acordo ao passar dos anos e tentar estabelecer padrões, isso por si só já poderia ser usado para prever possíveis mudanças em estratégia de negócios \cite{negash1}.
 
-Após o armazém, os dados devem ser coletados e limpos, a limpeza corresponde a remoção de linhas erradas, que contenham dados ou errados ou faltosos, que podem atrapalhar na análise e apresentação ao gestor. Em seguida, os dados são apresentados à pessoa do negócio, que a partir das suas análises irá tomar alguma decisão que afeta a estratégia da empresa. Com alguma sorte essa decisão será pautada em matemática, estatística e informações úteis, sendo bem embasada em dados e números.
+Como foi apresentado anteriormente, o BI serve para auxiliar nas tomadas de decisão, e isso é alcançado usando os dados da empresa ou órgão em que estiver sendo empregado. Os dados são armazenados em \textit{Data Warehouses}, que são armazéns de dados, em tradução livre, esses armazéns guardam dados históricos, então a partir deles é possível analisar o desenvolvimento de variáveis importantes e o comportamento delas de acordo com os anos e tentar estabelecer padrões, isso por si só já poderia ser usado para prever possíveis mudanças em estratégia de negócios \cite{negash1}.
+
+Após o armazém, os dados devem ser coletados e limpos, a limpeza corresponde a remoção de linhas erradas, que contenham dados errados ou faltosos, que podem atrapalhar na análise e apresentação ao gestor. Em seguida, os dados são apresentados à pessoa do negócio, que a partir das suas análises irá tomar alguma decisão que afeta a estratégia da empresa. 
 
 De forma resumida, o BI usa o Data Warehouse para guardar os dados, usa um conjunto de ferramentas e técnicas para limpar e extrair os dados, essa técnica também é conhecida como \textit{Extraction, Transform, Load} (ETL), e ,finalmente, apresenta gráficos que mostram o comportamento de variáveis de interesse da empresa para o gestor, que a partir disso escolhe alguma estratégia para os rumos da empresa/órgão/setor que gerencia.
 
@@ -53,11 +42,32 @@ De forma resumida, o BI usa o Data Warehouse para guardar os dados, usa um conju
 
 Isso tudo que foi tratado acima corresponde às etapas do processamento de dados estruturados, ou seja, dados que podem ser organizados e categorizados em linhas e colunas, e que, muitas vezes, possuem relações entre si. O processo para "manusear" dados não estruturados é um pouco diferente porque eles não são tão bem organizados, e alguns passos precisam ser inseridos nesse caminho para que eles sejam apresentados e tratados da melhor forma, evitando distorções.
 
-\section{Visualização de dados no BI}
+É possível ver que a Inteligência de Negócios não é formada por várias áreas diferentes dentro da Tecnologia da Informação, a seguir estão listadas algumas:
 
-Todas as etapas do processo são importantes, mas o gestor só enxerga o último estágio: a visualização, e as decisões serão tomadas a partir das conclusões tiradas da visualização, portanto, a visualização precisa de um cuidado especial, o visual é importante porque ele pode levar a conclusões erradas, então é necessário ter atenção com as cores, os eixos entre outros detalhes \cite{claus1}.
+\begin{itemize}
+	\item Armazenamento na forma de \textit{Data Warehouse}
+	\item Visualização de dados
+	\item Mineração de dados
+	\item Processamento analítico na forma de \textit{Online Analytic Processing} (OLAP)
+	\item Gerenciamento do conhecimento
+	\item Probabilidade
+	\item Estatística
+	\item Análises preditivas
+	\item Detecção de anomalias
+\end{itemize}
 
-No painel feito as tabelas são bastante usadas, elas são uma importante ferramenta para visualização de dados, mesmo assim, a aparente simplicidade pode fazer com que não recebam a atenção devida. 
+No decorrer do trabalho foram utilizados de forma mais frequente a análise de dados, a visualização e a detecção de anomalias.
+
+\subsection{Visualização de dados no BI}
+
+Todas as etapas do processo são importantes, mas o gestor só enxerga o último estágio: a visualização. As decisões serão tomadas a partir das conclusões tiradas da visualização, portanto, a visualização precisa de um cuidado especial, o visual é importante porque ele pode levar a conclusões erradas, então é necessário ter atenção com as cores, os eixos entre outros detalhes \cite{claus1}.
+
+Quando alguém menciona o visual, um dos exemplos que vem à mente logo é o gráfico em barras, ou o gráfico pizza, porém tabelas também são uma ótima forma de visualização de dados. No painel desenvolvido elas são bastante usadas pela simplicidade e clareza, e apresentam um esquema de cores que ilustra que tipo de processo é mais frequente nas Varas.
+
+\subsection{Análise de dados no BI}
+
+
+
 \section{Ferramentas de BI}
 
 Existem vários programas feitos para se desenvolver painéis BI, entre os mais usados podemos citar o PowerBI, Pentaho, Tableau entre outros. Na JFRN o software usado é o Qlikview. 

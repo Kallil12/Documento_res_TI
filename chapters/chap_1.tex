@@ -23,10 +23,7 @@ Na JFRN o BI é importante para entender o que está acontecendo nas diferentes 
 
 Nesse portal existem diferentes painéis, atendendo demandas distintas. O processo de se desenvolver painéis nessa plataforma e nesse modo de distribuição demanda uma quantidade considerável de tempo, e um certo nível de burocracia, pois precisam de documentos que autorizem o desenvolvimento e publicação, que são emitidos pelo TRF5. Esse é um ponto negativo para o desenvolvimento do BI, porque o objetivo dos painéis é, justamente, trazer agilidade para a tomada de decisões e refletir melhor a realidade de onde estiver implementado, então uma forma mais rápida de se desenvolver painéis, mesmo que sejam mais simples, seria uma boa ferramenta para atender às diferentes Varas e demandas específicas da JFRN.
 
-
-
 \section{Estrutura básica do BI}
-
 
 Como foi apresentado anteriormente, o BI serve para auxiliar nas tomadas de decisão, e isso é alcançado usando os dados da empresa ou órgão em que estiver sendo empregado. Os dados são armazenados em \textit{Data Warehouses}, que são armazéns de dados, em tradução livre, esses armazéns guardam dados históricos, então a partir deles é possível analisar o desenvolvimento de variáveis importantes e o comportamento delas de acordo com os anos e tentar estabelecer padrões, isso por si só já poderia ser usado para prever possíveis mudanças em estratégia de negócios \cite{negash1}.
 
@@ -58,49 +55,65 @@ Isso tudo que foi tratado acima corresponde às etapas do processamento de dados
 
 No decorrer do trabalho foram utilizados de forma mais frequente a análise de dados, a visualização e a detecção de anomalias.
 
-\subsection{Visualização de dados no BI}
+\subsection{Visualização de dados}
 
 Todas as etapas do processo são importantes, mas o gestor só enxerga o último estágio: a visualização. As decisões serão tomadas a partir das conclusões tiradas da visualização, portanto, a visualização precisa de um cuidado especial, o visual é importante porque ele pode levar a conclusões erradas, então é necessário ter atenção com as cores, os eixos entre outros detalhes \cite{claus1}.
 
-Quando alguém menciona o visual, um dos exemplos que vem à mente logo é o gráfico em barras, ou o gráfico pizza, porém tabelas também são uma ótima forma de visualização de dados. No painel desenvolvido elas são bastante usadas pela simplicidade e clareza, e apresentam um esquema de cores que ilustra que tipo de processo é mais frequente nas Varas.
+Quando alguém menciona o visual, um dos exemplos que vem à mente logo é o gráfico em barras, ou o gráfico pizza, porém tabelas também são uma ótima forma de visualização de dados. No painel desenvolvido elas são bastante usadas pela simplicidade e clareza, e apresentam um esquema de cores que ilustra qual tipo de processo é mais frequente nas Varas.
 
-\subsection{Análise de dados no BI}
+\subsection{Análise de dados}
+
+A análise de dados engloba vários processos distintos, a limpeza, transformação e modelagem dos dados fazem parte desse procedimento que pode apresentar informações relevantes onde estiver sendo aplicado. 
+
+Para fazer uma boa análise é necessário conhecer os dados, então estudar sobre o que eles medem e sobre a realidade em que eles são aplicados, no caso da JFRN é importante entender quais são as competências das Varas, por exemplo. Para ilustrar isso um pouco melhor, imagine que numa Vara de Execução Fiscal aparecem, de acordo com os dados, muitos processos de Roubo ou Vícios de Construção, a partir disso podemos ter três hipóteses:
+
+\begin{enumerate}
+	\item Os dados estão errados
+	\item A análise dos dados está errada
+	\item As pessoas desconhecem a competência da Vara
+\end{enumerate}
+
+Normalmente a análise errada é responsável por alguns problemas na visualização, e cabe ao analista de dados investigar as possíveis anomalias, e descobrir se realmente houveram erros na análise ou se aconteceu algum evento diferente na Vara, por exemplo. Aqui foi tratado de um caso numa Vara, mas esse tipo de análise deve ser feito em qualquer aplicação dos dados.
+
+É interessante notar que apesar das diversas funções que descobrem anomalias e casos extremos, ainda é importante que o analista, humano, conheça os dados e esteja sempre atualizado tanto em relação à tecnologia que será usada como também ao ramo em que estiver atuando.
 
 
+\section{Custos do BI}
 
-\section{Ferramentas de BI}
+A Tecnologia da Informação é fundamental para o gerenciamento e manutenção correta dos negócios atualmente, ela deve ser vista como um ativo da empresa, que merece investimento em \textit{hardware}, \textit{software} e pessoal capacitado, além dos treinamentos que devem ser dados à medida que a TI expande \cite{negash1}.
 
-Existem vários programas feitos para se desenvolver painéis BI, entre os mais usados podemos citar o PowerBI, Pentaho, Tableau entre outros. Na JFRN o software usado é o Qlikview. 
+\begin{itemize}
+	\item \textbf{Hardware} - Os custos relacionados ao \textit{hardware} variam de acordo com a estrutura que a empresa já tiver em mãos, se um \textit{data warehouse} já existe, então a expansão precisa ser feita para um \textit{data mart}, que é uma parte dedicada aos sistemas BI. Dependendo da estrutura pode ser necessária a expansão para um sistema de redes mais robusto, que suporte o tráfego dos dados.
+	
+	\item \textbf{Software} - Os \textit{softwares} BI custam alto, mas também possuem muitas funcionalidades, alguns deles como o Power BI tem assinaturas a partir de \$60.000 por ano, como pode ser visto no site da \href{https://powerbi.microsoft.com/en-us/pricing/}{Microsoft}, na cotação atual isso passa de R\$300.000, então pesquisar entre os principais fornecedores do mercado é crucial para ter um preço justo e que atenda às necessidades do cliente.
+	
+	\item \textbf{Implementação} - Essa categoria é uma extensão da anterior porque está diretamente relacionada. Após a aquisição da ferramenta BI e do \textit{hardware} é necessário, também, realizar um treinamento do pessoal. Esse tipo de gasto também é recorrente, ou seja, sempre vai existir porque à medida que novas pessoas chegam e que o sistema expande, novos treinamentos devem ser realizados. Estima-se que esse tipo de manutenção corresponde a 15\% dos custos.
+	
+	\item \textbf{Pessoal} - O custo com pessoal envolve tanto quem realmente vai trabalhar com BI como envolve quem vai dar suporte às atividades de BI. Por exemplo, o time de infraestrutura deve estar preparado com as tecnologias de engenharia de dados, e manutenção do servidor que armazena os dados do BI.
+	
+\end{itemize}
 
-Ultimamente as empresas que fornecem os softwares de BI têm notado que uma abordagem de serviços é mais rentável, então o cliente paga por um serviço e não por um produto. As mensalidades variam de acordo com o serviço que o cliente quiser, ficando mais caro à medida que mais funções são adicionadas ao pacote que será usado. Abaixo serão listados alguns dos principais serviços de BI do mercado.
+\subsection{Exemplos de ferramentas}
 
-\subsection{Power BI}
-
-O Power BI é um serviço da Microsoft, ele tem por objetivo fornecer visualização de dados, customizável pelo próprio usuário, e também funções de BI que sejam simples de serem feitas. 
-
-Em 2020 o preço dos serviços partem de \$9,99 para o Power BI Pro e \$4,995 para o Power BI Premium, é importante ressaltar que em ambos os casos esses valores são mensais, e o pacote que atende às necessidades da JFRN é o mais caro, que pode aumentar o preço de acordo com as funcionalidades extra que serão requeridas para atender às demandas.
+Existem muitas ferramentas BI no mercado hoje, com o crescimento da área também houve a maior oferta de ferramentas que fazem painéis mais rápidos ou de forma mais simples, exigindo menos treino ou menos infraestrutura. Alguns serviços também oferecem a computação em nuvem, e "alugam" o poder computacional de acordo com o uso do cliente. Com a grande variedade de produtos também vem uma grande diferença de preços. Podemos citar, novamente, o Power BI, um dos líderes nesse tipo de atividade, custando (em 2020) \$4.995 por mês para o serviço \textit{Premium}, e esse preço pode aumentar de acordo com os serviços extra que o cliente desejar incluir no pacote.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.40]{./figures/cap1/powerbi.png}
-	\caption{Preço do Power BI Premium}
+	\caption{Preço do Power BI Premium \\ fonte: Microsoft}
 \end{figure}
 
-\subsection{Qlikview}
 
-O Qlikview é um software desenvolvido pela Qlik, que tem focado os esforços no desenvolvimento do Qlik Sense, que começou como um produto paralelo e agora é o principal. Então, o suporte ao Qlikview está entrando no fim e nem é mais possível consultar os preços dele no site da Qlik. 
+Além do Power BI podemos citar o Qlikview, que é usado na JFRN. Ele é desenvolvido pela Qlik, que ultimamente vem focando os esforços e investimentos no Qlik Sense, que oferece várias vantagens. O Qlikview foi o principal produto da Qlik durante muito tempo, a primeira versão dele data de 1994, e recebeu várias melhorias ao longo dos anos, se adequando às novas tecnologias e incorporando funções diferentes. Atualmente a Qlik tenta levar os clientes do QlikView para o Qlik Sense, que fornece painéis em plataformas móveis (\textit{smartphones} por exemplo), integração com APIs e construção de visualização simplificada, através de recursos como clique-e-arraste. Os preços variam de 40 a 70 dólares, por mês por licença.
 
-Apesar disso, o Qlikview é uma boa ferramenta, oferece um bom conjunto de funções para analisar e apresentar os dados. O Qlik Sense é a evolução dele, com muito mais recursos.
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.40]{./figures/cap1/qlikview.png}
+	\caption{Qlikview versus Qlik Sense \\ fonte: Qlik}
+\end{figure}
+
+
 
 %https://primaconsulting.co.uk/news/2018/3/26/qlikview-vs-qliksense
-\subsection{Tableau}
-
-Tableau é uma solução que fornece funcionalidades clique-e-arraste para ajustar dados, criar painéis e visualizações. Existem três produtos dentro dele, o Tableau Desktop, Server e o Online. O preço entre eles varia de \$12,00 até \$70,00 por mês, por licença, podendo ajustar anualmente. É uma das ferramentas mais simples e completas do mercado, exigindo pouco conhecimento do analista por ser clique-e-arraste, por outro lado isso torna um pouco mais difícil o desenvolvimento de análises mais detalhadas.
-
-De modo geral, as principais ferramentas disponíveis são muito similares entre si, todas são competentes, fornecem ótimas funcionalidades, possuem um bom suporte e custam um valor razoavelmente alto, principalmente com o câmbio desfavorecendo o Real. Porém, as ferramentas proprietárias não são as únicas, e para o desenvolvimento do Painel do Centro de Inteligência o Python foi escolhido.
-
-
-
-%https://www.betterbuys.com/bi/tableau-pricing/
 
 

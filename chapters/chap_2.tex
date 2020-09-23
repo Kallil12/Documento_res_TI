@@ -1,17 +1,32 @@
 \chapter{Construção do painel}\label{cap_trabalho_academico}
 
-Antes de avançar para a parte técnica, é importante explicar o que é o Centro de Inteligência da JFRN e como um painel poderia ajudar na tarefa deles.
+Antes de avançar para a parte técnica, é importante explicar o que é o Centro de Inteligência da JFRN e como um painel poderia ajudar na tarefa deles. De acordo com o site do Centro de Inteligência, "A Comissão Judicial de Prevenção de Demandas foi idealizada por juízes da Seção Judiciária do RN como forma de otimizar o trabalho jurisdicional a partir de demandas repetitivas, e isso também será buscado com o Centro de Inteligência."
 
-De acordo com o site do Centro de Inteligência, ele existe para otimizar o trabalho jurisdicional a partir de demandas repetitivas. Esse tipo de demanda deve ser comunicado às autoridades para que a multiplicação desses casos diminuam, e não haja uma sobrecarga. Portanto, o painel será usado para auxiliar na análise dessas demandas, tentando acompanhar a evolução e desenvolvimento delas, agindo para que elas não sobrecarreguem a JFRN.
+Esse tipo de demanda deve ser comunicado às autoridades para que a ação sobre esses processos repetitivos seja rápida, e não haja uma sobrecarga. Portanto, o painel será usado para auxiliar na análise dessas demandas, tentando acompanhar a evolução e desenvolvimento delas. 
 
+Portanto, um painel que mostre os tipos de Assuntos mais recorrentes em cada Vara pode auxiliar o Centro de Inteligência a se preparar e comunicar embasado nos dados.
 
-\section{Python}
+\section{Tecnologias usadas}
 
-Python é uma linguagem de programação de alto nível e de aplicações gerais, foi criada por Guido van Rossum e lançada em 1991. Suporta vários paradigmas, incluindo orientação a objeto e programação funcional. Essas características a tornaram muito popular entre programadores, porque é possível construir muita coisa usando poucas linhas de código, e esses projetos vão desde um timer simples, até grandes análises de dados e sistemas com inteligência artificial.
+Uma das tarefas que fez parte do desenvolvimento do painel foi a pesquisa e escolha da ferramenta que poderia gerar a visualização, de forma rápida e com facilidade de ser distribuída pela infraestrutura de TI da JFRN. Como foi mostrado anteriormente, as ferramentas pagas custam caro, e a estrutura de desenvolvimento de painéis do TRF5 usa QlikView, que além de demandar uma licença para desenvolvimento, também precisa de alguns documentos para a publicação do painel. Então, algumas ferramentas gratuitas foram consideradas, e as opções se resumiram em Python e Metabase. O Metabase é uma ferramenta \textit{open source} e gratuita (na versão básica), que permite gerar visualizações e apresenta uma boa integração com bancos de dados, porém, algumas limitações na versão gratuita a tornaram menos interessante, principalmente quando comparada ao concorrente, que nesse caso era o Python. 
 
-No final do capítulo 1 foram detalhadas algumas ferramentas BI, entre elas Tableau e Power BI, essas ferramentas já vem prontas com todas as funcionalidades que o usuário vai precisar, já lê os dados automaticamente, identifica campos e cria gráficos de forma muito rápida, porém os custos de implementação são altos, as licenças também são caras e é difícil encontrar profissionais que mexam nessas ferramentas tão específicas. Já no Python alguns desses problemas são resolvidos, o Python é uma linguagem de programação, portanto não tem nada pronto, tudo precisa ser construído, desde o leitor de dados, até o construtor de gráficos, o trabalho para se desenvolver um painel usando uma linguagem de programação é difícil, mas uma vez desenvolvido, é muito fácil de se manter, e o custo é zero porque não há licenças que limitem a quantidade de usuários que podem acessar o que foi feito. Além disso, é relativamente fácil encontrar desenvolvedores de Python no Rio Grande do Norte (e no Brasil), porque é uma linguagem muito usada no mundo todo, isso pode ser visto no ranking elaborado pelo \textit{Institute of Electrical and Electronics Engineers} (IEEE).
+Python é uma linguagem de programação de alto nível e de aplicações gerais, portanto, nada tem a ver como uma ferramenta pronta de BI, não tem integração automática de dados, nem criação simples de gráficos e visualizações, porém é completamente gratuita e tem um ótimo suporte da própria comunidade de usuários. Além disso, o Python vem ganhando mais mercado e sendo usado em diferentes aplicações por diversas empresas, tornando-se mais relevante na TI. Por ser uma linguagem de programação, ele possui bibliotecas, que, de forma simplificada, são grandes conjuntos de funções com diferentes objetivos, podemos citar o Pandas, por exemplo, que é uma biblioteca para carregar e manipular dados, muito popular e bastante usada. 
 
-Portanto, o uso do Python para elaborar um painel pode ser difícil no início, porque muita coisa precisa ser construída do zero, mas uma vez que isso esteja desenvolvido é, relativamente, fácil de se manter porque não há custos envolvidos com o uso da ferramenta em si. Apesar disso, um dos problemas seria o suporte, nas opções pagas é possível requisitar suporte caso alguma coisa não funcione, já no Python se acontecer algum imprevisto, os próprios desenvolvedores é que devem solucionar.
+Além do Python para construir o painel em si, foi usado o QlikView para extrair os dados e gerar um arquivo que pudesse ser lido pelo Pandas. Portanto, de forma resumida temos:
+
+\begin{itemize}
+	\item Python
+	\begin{itemize}
+		\item Dash
+		\item Plotly
+		\item Pandas
+	\end{itemize}
+	\item QlikView
+\end{itemize}
+
+\subsection{Justificando o Python}
+
+No final do capítulo 1 foram detalhadas algumas ferramentas BI, entre elas Tableau e Power BI, essas ferramentas já vem prontas com todas as funcionalidades que o usuário vai precisar, já lê os dados automaticamente, identifica campos e cria gráficos de forma muito rápida, porém os custos de implementação são altos, as licenças também são caras e é difícil encontrar profissionais que mexam nessas ferramentas tão específicas. Já no Python alguns desses problemas são resolvidos, Python é uma linguagem de programação, portanto não tem nada pronto, tudo precisa ser construído, desde o leitor de dados, até o construtor de gráficos, o trabalho para se desenvolver um painel usando uma linguagem de programação é difícil, mas uma vez desenvolvido, é muito fácil de se manter e o custo é zero porque não há licenças que limitem a quantidade de usuários que podem acessar o que foi feito. Além disso, é relativamente fácil encontrar desenvolvedores de Python no Rio Grande do Norte (e no Brasil), porque é uma linguagem muito usada no mundo todo, isso pode ser visto no ranking elaborado pelo \textit{Institute of Electrical and Electronics Engineers} (IEEE).
 
 \begin{figure}[h]
 	\centering
@@ -19,11 +34,15 @@ Portanto, o uso do Python para elaborar um painel pode ser difícil no início, 
 	\caption{Linguagens de programação mais usadas em 2020}
 \end{figure}
 
-Outro ponto positivo de se usar Python é a replicabilidade, é possível criar painéis que atendam as diferentes Varas da JFRN, mostrando os dados que os gestores preferirem e acharem que são mais relevantes para suas realidades.
+Portanto, construir um painel com gráficos e análises complexas usando uma linguagem de programação pode ser difícil no início, muitas habilidades estão envolvidas no processo, além de conhecer sobre análise e visualização de dados, o desenvolvedor também precisa conhecer um pouco de \textit{front-end}, para os visuais e \textit{back-end}, para a integração entre as analises e a atualização do visual em função do que o usuário quer, e, finalmente, precisa entender um pouco sobre \textit{container} para poder embarcar o código de forma simples. 
+
+Outro ponto positivo de se usar Python é a replicabilidade, é possível criar painéis que atendam diferentes Varas da JFRN, que apresentam diferentes demandas e dados. Essa forma de se desenvolver painéis mais simples não precisa ficar restrita ao Centro de Inteligência, ela pode expandir para atender necessidades mais simples, que não precisem do QlikView, de forma mais rápida mas atendendo às necessidades do gestor, levando em conta as características locais dos dados de onde for aplicado. 
+
+É claro que esse tipo de expansão da TI deve ser acompanhada de um time maior de profissionais, com diferentes habilidades e competências, treinamentos relacionados a Python, visualização de dados, análises de dados etc. Mas os impactos disso seriam bons, os gestores teriam melhor controle sobre seus ambientes de trabalho, com novas visualizações e dados para basear novas estratégias por exemplo.
 
 \section{Estrutura básica do painel}
 
-Com os dados da JFRN em mãos e a ferramenta escolhida, passou-se a pesquisar quais seriam as bibliotecas usadas, portanto, a estrutura ficou da seguinte forma:
+Com os dados da JFRN em mãos e a ferramenta escolhida, passou-se a pesquisar quais seriam as bibliotecas usadas. Ultimamente algumas empresas tem usado Python para fazer painéis mais simples e leves, e a biblioteca usada pela maioria é a Dash, a partir disso era foi montado o fluxo de apresentação de dados, que ficou da seguinte forma:
 
 \begin{figure}[h]
 	\centering
@@ -31,9 +50,21 @@ Com os dados da JFRN em mãos e a ferramenta escolhida, passou-se a pesquisar qu
 	\caption{Estrutura básica do painel}
 \end{figure}
 
-O painel que se propôs ao Centro de Inteligência não tem a estrutura clássica com diferentes tabelas (fato e dimensão), com as quais se geram as visualizações, no lugar disso, existe um arquivo .csv que contém os dados que serão usados, esses dados .csv fazem parte uma extração que veio do PJe, e a partir desse arquivo o painel vai criar subconjuntos de acordo com o ano e órgão julgador escolhidos pelo usuário. Portanto, esse painel se aproxima mais de um visualizador de dados do que de um painel BI.
+A leitura e mineração dos dados é feita pelo Pandas, e a apresentação pelo Dash. 
 
-Nele é possível selecionar duas variáveis: o Órgão Julgador e o Ano. A partir dessas escolhas o sistema vai fatiar os dados recebidos e mostrará algumas análises. Essas análises são mostradas em forma de tabelas condicionais, que mudam as cores das células de acordo com a frequência de aparição dos Assuntos.
+O painel que se propôs ao Centro de Inteligência não tem a estrutura clássica com diferentes tabelas (fato e dimensão), com as quais se geram as visualizações, no lugar disso, existe um arquivo .csv que contém os dados que serão usados, esses dados .csv fazem parte uma extração que veio do PJe, e a partir desse arquivo o painel vai criar subconjuntos de acordo com o ano e órgão julgador escolhidos pelo usuário. Portanto, esse painel se aproxima mais de um visualizador de dados do que de um painel BI. Nele é possível selecionar duas variáveis: o Órgão Julgador e o Ano. A partir dessas escolhas o sistema vai fatiar os dados recebidos e mostrará algumas análises. Essas análises são mostradas em forma de tabelas condicionais, que mudam as cores das células de acordo com a frequência de aparição dos Assuntos.
+
+\subsection{Plotly e Dash}
+
+A Plotly é uma empresa canadense que desenvolve ferramentas para análise e visualização de dados. Os serviços essenciais são gratuitos, basta carregar a biblioteca no programa e começar a usar, isso vale para o \textit{plotly graph objects} por exemplo, que gera gráficos interativos, e também vale para o Dash, que é um dos seus principais produtos. 
+
+Plotly além de ser o nome da empresa, também é o nome da ferramenta de visualização de dados. Ela foi usada nas primeiras versões do painel, mas como a visualização passou a se concentrar nas tabelas, acabou saindo da versão atual.
+
+A biblioteca Dash é um \textit{framework} usado para construir aplicações web que apresentem um visual simples de se configurar e que sirva para análises de dados, não é necessário (porém ajuda bastante) conhecer \textit{html} ou outras tecnologias de \textit{front-end} para montar um painel. O resultado pode ser distribuído pela internet, usando serviços como o \textit{Heroku}, de forma gratuita.
+
+\subsection{Pandas}
+
+O Pandas é essencial na execução do painel, ele carrega as ferramentas necessárias para a manipulação dos dados, como a seleção correta do Órgão Julgador escolhido, e o ano a ser visualizado. Além disso, ele também é responsável por montar os \textit{dataframes}, que são estruturas de dados, que servem de base para as tabelas e as avaliações por cores que é mostrada na visualização final.
 
 \subsection{Estrutura dos dados}
 
@@ -49,7 +80,7 @@ Nessa primeira versão do painel os dados virão de um arquivo .csv gerado a par
 	\item Assunto Código - diferentes assuntos possuem diferentes códigos, e a contagem dos processos se dá usando esse campo, que agrupa os códigos que são iguais e conta o total para saber quantos deram entrada na JFRN.
 \end{itemize} 
 
-A partir da escolha do Ano e do Órgão Julgador, o painel irá fazer as análises e seleções relevantes, populando a tabela e mostrando ao usuário quais são os processos mais frequentes de cada mês, no Ano e Vara escolhidos.
+A partir da escolha do Ano e Órgão Julgador, o painel irá fazer as análises e seleções relevantes, populando a tabela e mostrando ao usuário quais são os processos mais frequentes de cada mês, no Ano e Vara escolhidos.
 
 \subsection{Análise de anomalias}
 
@@ -59,9 +90,9 @@ Primeiro, há uma análise da média ($\overline{x}$) de Assuntos que entraram n
 
 As variáveis são:
 \begin{itemize}
-	\item $anom_2$ que é a média mais duas vezes o desvio padrão, definida como: $$anom_2 = media_{assuntos} + (2*\sigma)$$
+	\item $anom_2$ definida como: $$anom_2 = media_{assuntos} + (2*\sigma)$$
 	
-	\item $anom_1$ que é a média mais o desvio padrão, definida como: $$anom_1 = media_{assuntos} + \sigma$$
+	\item $anom_1$ definida como: $$anom_1 = media_{assuntos} + \sigma$$
 	
 	\item $media_{assuntos}$ que é a média simples dos assuntos, a cada dois anos:
 	$$media_{assuntos} = \sum\limits_{ano}^{ano-1}\frac{assuntos}{total_{meses}}$$
@@ -78,24 +109,5 @@ Com essas variáveis encontradas, a distribuição das cores segue as regras a s
 	\end{cases}       
 \end{equation}
 
-\section{Bibliotecas usadas}
 
-Para construir o painel é necessário usar diferentes funções que estão abrigadas em bibliotecas distintas, então para conseguir montar tudo foram usados o Dash, Pandas, Numpy e Plotly. 
 
-\begin{itemize}
-	\item Dash - construção do visual
-	\item Plotly - construção de algumas partes gráficas
-	\item Pandas - análise e ajustes dos dados
-\end{itemize}
-
-\subsection{Plotly e Dash}
-
-A Plotly é uma empresa canadense que desenvolve ferramentas para análise e visualização de dados. Os serviços essenciais são gratuitos, basta carregar a biblioteca no programa e começar a usar, isso vale para o \textit{plotly graph objects} por exemplo, que gera gráficos interativos, e também vale para o Dash, que é um dos seus principais produtos. 
-
-Plotly além de ser o nome da empresa, também é o nome da ferramenta de visualização de dados. Ela foi usada nas primeiras versões do painel, mas como a visualização passou a se concentrar nas tabelas, acabou saindo da versão atual.
-
-A biblioteca Dash é um \textit{framework} usado para construir aplicações web que apresentem um visual simples de se configurar e que sirva para análises de dados, não é necessário (porém ajuda bastante) conhecer \textit{html} ou outras tecnologias de \textit{front-end} para montar um painel. O resultado pode ser distribuído pela internet, usando serviços como o \textit{Heroku}, de forma gratuita.
-
-\subsection{Pandas}
-
-O Pandas é essencial na execução do painel, ele carrega as ferramentas necessárias para a manipulação dos dados, como a seleção correta do Órgão Julgador escolhido, e o ano a ser visualizado. Além disso, ele também é responsável por montar os \textit{dataframes}, que são estruturas de dados, que servem de base para as tabelas e as avaliações por cores que é mostrada na visualização final.

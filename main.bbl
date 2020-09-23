@@ -12,15 +12,20 @@ Dispon{\'\i}vel em:
   \url{https://medium.com/analytics-vidhya/python-dash-data-visualization-dashboard-template-6a5bff3c2b76}.
   Acesso em: 20 ago. 2020.}
 
-\bibitem[Negash 2015]{negash1}
-\abntrefinfo{Negash}{NEGASH}{2015}
+\bibitem[Negash 2003]{negash1}
+\abntrefinfo{Negash}{NEGASH}{2003}
 {NEGASH, S. Business intelligence.
 \emph{Communications of the Association for Information Systems}, v.~1, n.~1,
-  p. 177--195, 2015.}
+  p. 177--195, 2003.}
 
 \bibitem[Wilke 2019]{claus1}
 \abntrefinfo{Wilke}{WILKE}{2019}
-{WILKE, C.~O. \emph{Fundamentals of Data Visualization}. [S.l.]: Ceira -
-  Coimbra, 2019.}
+{WILKE, C.~O. \emph{Fundamentals of Data Visualization}. [S.l.]: O'Reilly,
+  2019.}
+
+\bibitem[Willen 2002]{willen1}
+\abntrefinfo{Willen}{WILLEN}{2002}
+{WILLEN, C. Airborne opportunities.
+\emph{Intelligente Enterprise}, v.~1, p. 11--12, 2002.}
 
 \end{thebibliography}

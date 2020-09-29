@@ -1,6 +1,15 @@
 \chapter{Detecção de anomalias}\label{cap_trabalho_academico}
 
-%JUSTIFICAR A FORMA QUE A ANÁLISE ESTÁ SENDO FEITA
 
-A distribuição dos processos nas Varas pode ser analisada por alguns histogramas, 
+Em alguns casos os dados podem apresentar registros que não parecem pertencer ao resto do conjunto, esses registros desviam muito do resto das observações e pode ser um problema na análise. Se o analista de dados conhecer o negócio, ele pode conseguir explicar a origem desses desvios. Por exemplo, imagine que uma loja registra um total de 10 vendas de produtos diariamente, e em uma determinada semana, sem explicação aparente, vendeu 1000 (diariamente também), após isso as vendas voltam para a casa dos 10 por dia, claramente essa semana diferente deveria ser analisada para se entender as razões desse salto, mas se esse mesmo comportamento é registrado durante a \textit{black friday}, ele pode ser, justamente, o esperado para aquele período. Mas o \textit{outlier} como também são conhecidas essas anomalias, pode ter sido originada em algum \textit{bug} do sistema e isso precisa investigado com as outras áreas do negócio, além da TI.
+
+Por causa dessas nuances a detecção de anomalias deve ser tratada com cuidado, porque analisando apenas os dados por si só não garante que os valores que se distanciam do normal são realmente anômalos. Na prática, é esperado que os dados sejam analisados apenas pelo analista, mas é importante que haja uma integração entre as diferentes áreas do negócio, no caso da JFRN, Varas e equipe de TI, e essa integração é uma tendência porque, como foi dito no capítulo 1, a quantidade de dados e variáveis que precisam ser levadas em conta quando se define uma estratégia, numa empresa ou órgão público, são muito grandes e o gestor precisa tanto conhecer os dados como também saber interpretar o que está diante dele.
+
+\section{Distribuição dos dados}
+
+Analisando a distribuição dos Assuntos nas Varas é possível concluir que existe uma concentração de Assuntos à esquerda, como é possível ver abaixo:
+
+INSERIR HISTOGRAMAS
+
+A natureza das Varas, e suas especialidades, já admite que seja normal que hajam Assuntos muito mais frequentes que outros. Então, transformar os dados numa distribuição normal não seria adequado porque poderia mascarar como Outlier um Assunto que não é, e o importante aqui é mostrar apenas o que é mais frequente na realidade de cada Vara. Além disso, as Varas Cíveis recebem uma gama muito variada de processos, dos mais diversos assuntos, que podem variar sua frequência de acordo com algum acontecimento externo a Vara, portanto, o gestor precisa ver e saber quais são esses tipos de processos mais frequentes, e ele mesmo pode investigar as causas desse comportamento, determinando se é anômalo ou não.
 

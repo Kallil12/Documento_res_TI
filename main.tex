@@ -29,6 +29,11 @@
 \usepackage{microtype} 			% Melhorias de justificação
 \usepackage{pdftexcmds}         % Condicional
 \usepackage{amsmath}
+
+% legendas em imagens lado a lado
+\usepackage{caption}	
+\usepackage{subcaption}
+%\usepackage{subfig}
 		
 % Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
 \usepackage{lipsum}				% Geração de dummy text
@@ -67,7 +72,7 @@
 \local{Natal-RN, Brasil}
 \data{\the\year}
 \orientador{Elias Jacob}
-\coorientador{Nome do coorientador}
+\coorientador{Leonardo Bezerra}
 \universidade{Universidade Federal do Rio Grande do Norte}
 \centro{Instituto Metrópole Digital}
 \programa{Programa de Residência em Tecnologia da Informação}
@@ -210,19 +215,19 @@
    \vspace*{\fill}
    \centering
    \noindent
-   \textit{Dedicatória.} \vspace*{\fill}
+   \textit{Dedico este trabalho ao meu irmão, Kaio, que apesar de ser mais novo que eu sempre me ensinou, e me ensina, bastante coisa. Ele é o melhor amigo que alguém pode ter, obrigado irmãozinho.} \vspace*{\fill}
 \end{dedicatoria}
 
 % Agradecimentos
 \begin{agradecimentos}
-Agradecimentos
+Agradeço a todo o time da JFRN que sempre proporcionou uma ótima estrutura e um ambiente de trabalho muito bom muito bom, sempre bem equipado e atendendo às demandas de forma rápida. Agradeço, também, ao time de infraestrutura que sempre foi extremamente solicito e também ao grande time de desenvolvedores que ajudaram a ressuscitar robôs robôs, tornando-os até mais rápidos. Devo agradecer ao time de BI também, que nesses 18 meses me ensinou muito e me mostrou diversas ferramentas que eu jamais teria conhecido e aprendido a usar se não estivesse cercado de gente competente. Por último, mas não menos importante, gostaria de agradecer aos professores Eduardo Aranha, Elias Jacob e Leonardo Bezerra pelas aulas, pelo tempo dedicado a me orientar de diversas formas e pelas reflexões que foram levantadas durante as várias conversas, me senti muito sortudo de ter conhecido esses trio que me inspirou bastante a estudar mais, me esforçar mais e ser melhor de maneira geral.
 \end{agradecimentos}
 
 % Epígrafe
 \begin{epigrafe}
     \vspace*{\fill}
 	\begin{flushright}
-		Epígrafe
+		\textit{I have spoken. -Kuiil}
 	\end{flushright}
 \end{epigrafe}
 
@@ -243,21 +248,23 @@ Nesse contexto o painel do Centro de Inteligência deve ser usado para monitorar
 \begin{resumo}[Abstract]
 \vspace{\onelineskip}
 \begin{otherlanguage*}{english}
-O resumo em língua estrangeira (em inglês Abstract, em espanhol Resumen, em francês Résumé) é uma versão do resumo escrito na língua vernácula para idioma de divulgação internacional. Ele deve apresentar as mesmas características do anterior (incluindo as mesmas palavras, isto é, seu conteúdo não deve diferir do resumo anterior), bem como ser seguido das palavras representativas do conteúdo do trabalho, isto é, palavras-chave e/ou descritores, na língua estrangeira. Embora a presente especificação considere o inglês como língua estrangeira (o mais comum), não fica impedida a adoção de outras línguas (a exemplo de espanhol ou francês) para redação do resumo em língua estrangeira.
+Information Technology (IT) has been gaining ground in companies and agencies, it has come to be seen as an asset for being an area of intelligence, identifying new opportunities and problems as well. If used correctly, IT can promote important gains in the place where it is applied, and prevent a setback from increasing and becoming worse.
 
-\noindent\textbf{Keywords}: Keywords separated by dots.
+In this context, the Intelligence Center panel should be used to monitor repetitive demands, trying to prevent these demands from multiplying too quickly, consuming resources from the Federal Justice.
+
+\noindent\textbf{Keywords}: BI. Data. Information.
 \end{otherlanguage*}
 \end{resumo}
 
 % Resumo em francês 
-\begin{resumo}[Résumé]
-\vspace{\onelineskip}
-\begin{otherlanguage*}{french}
-O resumo em língua estrangeira (em inglês Abstract, em espanhol Resumen, em francês Résumé) é uma versão do resumo escrito na língua vernácula para idioma de divulgação internacional. Ele deve apresentar as mesmas características do anterior (incluindo as mesmas palavras, isto é, seu conteúdo não deve diferir do resumo anterior), bem como ser seguido das palavras representativas do conteúdo do trabalho, isto é, palavras-chave e/ou descritores, na língua estrangeira. Embora a presente especificação considere o inglês como língua estrangeira (o mais comum), não fica impedida a adoção de outras línguas (a exemplo de espanhol ou francês) para redação do resumo em língua estrangeira.
+%\begin{%resumo}[Résumé]
+%\vspace{\onelineskip}
+%\begin{otherlanguage*}{french}
+%O resumo em língua estrangeira (em inglês Abstract, em espanhol Resumen, em francês Résumé) é %uma versão do resumo escrito na língua vernácula para idioma de divulgação internacional. Ele %deve apresentar as mesmas características do anterior (incluindo as mesmas palavras, isto é, %seu conteúdo não deve diferir do resumo anterior), bem como ser seguido das palavras %representativas do conteúdo do trabalho, isto é, palavras-chave e/ou descritores, na língua %estrangeira. Embora a presente especificação considere o inglês como língua estrangeira (o %mais comum), não fica impedida a adoção de outras línguas (a exemplo de espanhol ou francês) %para redação do resumo em língua estrangeira.
 
-\noindent\textbf{Mots-clés}: Mots-clés séparés par points.
-\end{otherlanguage*}
-\end{resumo}
+%\noindent\textbf{Mots-clés}: Mots-clés séparés par points.
+%\end{otherlanguage*}
+%\end{resumo}
 
 % Inserir lista de ilustrações
 \pdfbookmark[0]{\listfigurename}{lof}
@@ -265,19 +272,20 @@ O resumo em língua estrangeira (em inglês Abstract, em espanhol Resumen, em fr
 \clearpage
 
 % Inserir lista de quadros
-\pdfbookmark[0]{\listofquadrosname}{loq}
-\listofquadros*
-\clearpage
+%\pdfbookmark[0]{\listofquadrosname}{loq}
+%\listofquadros*
+%\clearpage
 
 % Inserir lista de tabelas
-\pdfbookmark[0]{\listtablename}{lot}
-\listoftables*
-\clearpage
+%\pdfbookmark[0]{\listtablename}{lot}
+%\listoftables*
+%\clearpage
 
 % Inserir lista de abreviaturas e siglas
 \begin{siglas}
   \item[IMD] Instituto Metrópole Digital
   \item[UFRN] Universidade Federal do Rio Grande do Norte
+  \item[JFRN] Justiça Federal do Rio Grande do Norte
   \item[TI] Tecnologia da Informação
   \item[BI] \textit{Business Intelligence}
   

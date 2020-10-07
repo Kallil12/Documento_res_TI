@@ -1,35 +1,23 @@
-\chapter{Introdução ao BI}\label{cap_trabalho_academico}
+\chapter{BI na Justiça Federal do RN}\label{cap_trabalho_academico}
 
 % https://www.researchgate.net/publication/273861123_Why_Business_Intelligence_Significance_of_Business_Intelligence_Tools_and_Integrating_BI_Governance_with_Corporate_Governance
 
-Sistemas de Business Intelligence (BI) combinam dados operacionais com ferramentas analíticas para apresentar informações complexas e competitivas para os tomadores de decisão \cite{negash1}. Esse conceito, apresentado por Solomon Negash em 2003 serve de base para o que veio depois, mas antes disso as ferramentas de BI já existiam, podemos citar bancos de dados, visualização e análise de dados e as diversas análises estatísticas que existem há tanto tempo e que são usadas na indústria há anos, a Oracle, por exemplo, atua no mercado de bancos de dados e análises de dados desde a década de 1970. 
+Na Justiça Federal do Rio Grande do Norte (JFRN) o BI é importante para entender o que está acontecendo nas diferentes Varas. O software usado é o Qlikview, que é capaz de montar gráficos e consultas a partir do banco de dados fornecido pelo Tribunal Regional Federal da $5^{a}$ região (TRF5), a distribuição dos painéis, gerados pelo Qlikview, é feita pelo portal BI do TRF5.
 
-O objetivo do BI é preparar os dados e a visualização, auxiliando quem vai tomar a decisão estratégia a enxergar esses dados da melhor forma e entender o estado da empresa, embasando as escolhas em números, estatística e matemática. 
+Nesse portal existem diferentes painéis, que atendem demandas distintas, sendo bastante usado por servidores e magistrados. Porém, o processo de desenvolvimento nesses painéis apresenta alguns gargalos, pois antes de desenvolver é necessário que hajam documentos que autorizem a criação de um novo painel, e após o desenvolvimento é necessário um outro documento autorizando a publicação desse painel. Durante o desenvolvimento também há algumas demandas que dependem do time de Tecnologia da Informação do Tribunal Regional Federal da 5ª Região (TRF5), essas demandas vão desde disponibilização de dados até renovação de licenças expiradas, essa dependência também gera alguns atrasos para o time local da JFRN. Cada desenvolvedor deve ter uma licença válida, que é paga, isso acaba aumentando o custo do desenvolvimento. 
 
-De acordo com um estudo feito por C. Willen \cite{willen1}, as estratégias do BI têm sido usadas para assistir as seguintes atividades:
-
-\begin{itemize}
-	\item Gerenciamento da performance corporativa
-	\item Otimizar relações com clientes, monitorar atividades dos negócios e suporte às decisões tradicionais
-	\item Uso de ferramentas BI para operações e/ou estratégias específicas
-	\item Criação de relatórios com métricas dos negócios
-\end{itemize}
-
-Nessa lista fica claro que o BI é muito importante para entender o comportamento interno da empresa em que for aplicado, as conclusões são usadas para alocar ou realocar recursos para áreas mais importantes ou que estejam sob alta demanda.
-
-\section{BI na Justiça Federal do RN}
-
-Na JFRN o BI é importante para entender o que está acontecendo nas diferentes Varas. O software usado é o Qlikview, que é capaz de montar gráficos e consultas a partir do banco de dados fornecido pelo Tribunal Regional Federal da $5^{a}$ região (TRF5), a distribuição dele é feita pelo portal BI do TRF5.
-
-Nesse portal existem diferentes painéis, atendendo demandas distintas. O processo de se desenvolver painéis nessa plataforma e nesse modo de distribuição demanda uma quantidade considerável de tempo, e um certo nível de burocracia, pois precisam de documentos que autorizem o desenvolvimento e publicação, que são emitidos pelo TRF5. Esse é um ponto negativo para o desenvolvimento do BI, porque o objetivo dos painéis é, justamente, trazer agilidade para a tomada de decisões e refletir melhor a realidade de onde estiver implementado, então uma forma mais rápida de se desenvolver painéis, mesmo que sejam mais simples, seria uma boa ferramenta para atender às diferentes Varas e demandas específicas da JFRN.
 
 \section{Estrutura básica do BI}
 
-Como foi apresentado anteriormente, o BI serve para auxiliar nas tomadas de decisão, e isso é alcançado usando os dados da empresa ou órgão em que estiver sendo empregado. Os dados são armazenados em \textit{Data Warehouses}, que são armazéns de dados, em tradução livre, esses armazéns guardam dados históricos, então a partir deles é possível analisar o desenvolvimento de variáveis importantes e o comportamento delas de acordo com os anos e tentar estabelecer padrões, isso por si só já poderia ser usado para prever possíveis mudanças em estratégia de negócios \cite{negash1}.
+Como foi apresentado anteriormente, o BI serve para auxiliar nas tomadas de decisão, e isso é alcançado usando os dados da instituição em que estiver sendo empregado. Os dados são armazenados em \textit{Data Warehouses}(DW), que são armazéns de dados, em tradução livre, esses armazéns guardam dados históricos, então a partir deles é possível analisar o desenvolvimento de variáveis importantes e o comportamento delas de acordo com períodos que o usuário desejar, e assim identificar padrões, essa análise, que é simples, já poderia ser usada para prever possíveis mudanças na estratégia de negócios \cite{negash1}.
 
 Após o armazém, os dados devem ser coletados e limpos, a limpeza corresponde a remoção de linhas erradas, que contenham dados errados ou faltosos, que podem atrapalhar na análise e apresentação ao gestor. Em seguida, os dados são apresentados à pessoa do negócio, que a partir das suas análises irá tomar alguma decisão que afeta a estratégia da empresa. 
 
-De forma resumida, o BI usa o Data Warehouse para guardar os dados, usa um conjunto de ferramentas e técnicas para limpar e extrair os dados, essa técnica também é conhecida como \textit{Extraction, Transform, Load} (ETL), e ,finalmente, apresenta gráficos que mostram o comportamento de variáveis de interesse da empresa para o gestor, que a partir disso escolhe alguma estratégia para os rumos da empresa/órgão/setor que gerencia.
+Depois de carregar os dados do DW, os dados devem ser limpos, essa limpeza de dados corresponde a remoção de dados que sejam ou errados ou inexistentes, que podem causar problemas na análise de dados e na visualização que será exibida para o gestor. Imagine que num conjunto de dados sobre alturas de pessoas existe alguém com 15,5m de altura, esse dado é errado e pode causar algum distúrbio na análise, alterando a média da altura dessa amostra, por exemplo.
+
+Após a limpeza desses dados, eles podem ser lidos pelos painéis, que geram as visualizações para os gestores, que por sua vez tomarão as decisões baseados em dados corretos.  
+
+De forma resumida, o BI usa o DW para guardar os dados, usa um conjunto de ferramentas e técnicas para limpar e extrair os dados, essa técnica também é conhecida como \textit{Extraction, Transform, Load} (ETL), e ,finalmente, apresenta gráficos que mostram o comportamento de variáveis de interesse da instituição para o gestor, que a partir disso escolhe alguma estratégia para os rumos da empresa/órgão/setor que gerencia.
 
 \begin{figure}[h]
 	\centering
@@ -37,9 +25,9 @@ De forma resumida, o BI usa o Data Warehouse para guardar os dados, usa um conju
 	\caption{Resumo de um sistema BI}
 \end{figure}
 
-Isso tudo que foi tratado acima corresponde às etapas do processamento de dados estruturados, ou seja, dados que podem ser organizados e categorizados em linhas e colunas, e que, muitas vezes, possuem relações entre si. O processo para "manusear" dados não estruturados é um pouco diferente porque eles não são tão bem organizados, e alguns passos precisam ser inseridos nesse caminho para que eles sejam apresentados e tratados da melhor forma, evitando distorções.
+Isso que foi tratado acima corresponde às etapas do processamento de dados estruturados, ou seja, dados que podem ser organizados e categorizados em linhas e colunas, e que, muitas vezes, possuem relações entre si. O processo para "manusear" dados não estruturados é um pouco diferente porque eles não são tão bem organizados, e alguns passos precisam ser inseridos nesse caminho para que eles sejam apresentados e tratados da melhor forma, evitando distorções.
 
-É possível ver que a Inteligência de Negócios não é formada por várias áreas diferentes dentro da Tecnologia da Informação, a seguir estão listadas algumas:
+É possível ver que a Inteligência de Negócios é formada por várias áreas diferentes dentro da Tecnologia da Informação, a seguir estão listadas algumas:
 
 \begin{itemize}
 	\item Armazenamento na forma de \textit{Data Warehouse}
@@ -57,9 +45,18 @@ No decorrer do trabalho foram utilizados de forma mais frequente a análise de d
 
 \subsection{Visualização de dados}
 
-Todas as etapas do processo são importantes, mas o gestor só enxerga o último estágio: a visualização. As decisões serão tomadas a partir das conclusões tiradas da visualização, portanto, a visualização precisa de um cuidado especial, o visual é importante porque ele pode levar a conclusões erradas, então é necessário ter atenção com as cores, os eixos entre outros detalhes \cite{claus1}.
+A visualização de dados é a representação gráfica dos dados, ela engloba a produção de imagens que comunicam o comportamento e a relação dos dados analisados. Existem diferentes formas de exibição:
 
-Quando alguém menciona o visual, um dos exemplos que vem à mente logo é o gráfico em barras, ou o gráfico pizza, porém tabelas também são uma ótima forma de visualização de dados. No painel desenvolvido elas são bastante usadas pela simplicidade e clareza, e apresentam um esquema de cores que ilustra qual tipo de processo é mais frequente nas Varas.
+\begin{itemize}
+	\item Gráficos de barras
+	\item Histogramas
+	\item Gráficos de linhas
+	\item Tabelas
+	\item Gráficos de dispersão
+\end{itemize}
+
+Na visualização de dados é importante transmitir o comportamento dos dados. Se um número é o dobro de outro, isso deve ser refletido na visualização, que não deve distorcer ou enganar. Ao mesmo tempo, a visualização deve ser fácil de entender. Boas representações visuais podem melhorar a mensagem da visualização. Se uma figura contém cores que não combinam, elementos visuais desequilibrados ou outras características que distraem o usuário, então será difícil de se interpretar corretamente os dados \cite{claus1}. Para que os dados sejam lidos da melhor forma, também é importante que o usuário saiba realizar interpretações, e entender sobre o que é mostrado. Por exemplo, o usuário precisa ter noções de correlação e causalidade.
+
 
 \subsection{Análise de dados}
 

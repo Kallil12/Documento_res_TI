@@ -62,27 +62,26 @@ Na visualização de dados é importante transmitir o comportamento dos dados. S
 
 A análise de dados engloba vários processos distintos, a limpeza, transformação e modelagem dos dados fazem parte desse procedimento que pode apresentar informações relevantes onde estiver sendo aplicado. 
 
-Para fazer uma boa análise é necessário conhecer os dados, então estudar sobre o que eles medem e sobre a realidade em que eles são aplicados, no caso da JFRN é importante entender quais são as competências das Varas, por exemplo. Para ilustrar isso um pouco melhor, imagine que numa Vara de Execução Fiscal aparecem, de acordo com os dados, muitos processos de Roubo ou Vícios de Construção, a partir disso podemos ter três hipóteses:
-
+Para fazer uma boa análise é necessário conhecer os dados, então estudar sobre o que eles medem e sobre a realidade em que eles são aplicados, no caso da JFRN é importante entender quais são as competências das Varas. As Varas da JFRN possuem especialidades diferentes, tendo algumas competência para análise de processos Cíveis, Criminais e, ainda, os Juizados Especiais para processamento de demandas com menor complexidade. Então, como existem esses diferentes tipos de Vara, imagine que em uma delas, de competência Cível, existe uma alta frequência de Processos que pertenceriam a alguma Vara Criminal, a partir disso podemos levantar algumas hipóteses:
 \begin{enumerate}
-	\item Os dados estão errados
-	\item A análise dos dados está errada
-	\item As pessoas desconhecem a competência da Vara
+	\item Os dados estão errados;
+	\item A análise dos dados está errada;
+	\item As pessoas desconhecem a competência da Vara e por isso cadastram processos que não deveriam ser dessa Vara.
 \end{enumerate}
 
-Normalmente a análise errada é responsável por alguns problemas na visualização, e cabe ao analista de dados investigar as possíveis anomalias, e descobrir se realmente houveram erros na análise ou se aconteceu algum evento diferente na Vara, por exemplo. Aqui foi tratado de um caso numa Vara, mas esse tipo de análise deve ser feito em qualquer aplicação dos dados.
+Normalmente a análise errada é responsável por alguns problemas na visualização, e cabe ao analista de dados investigar as possíveis anomalias, e descobrir se realmente houveram erros na análise ou se aconteceu algum evento diferente na Vara, por exemplo. Em qualquer hipótese fica claro que a coordenação e comunicação entre diferentes áreas, TI e servidores da justiça, é essencial.
 
-É interessante notar que apesar das diversas funções que descobrem anomalias e casos extremos, ainda é importante que o analista, humano, conheça os dados e esteja sempre atualizado tanto em relação à tecnologia que será usada como também ao ramo em que estiver atuando.
+Também é importante notar que apesar das diversas funções que descobrem anomalias e casos extremos, ainda é importante que o analista, humano, conheça os dados e esteja sempre atualizado tanto em relação à tecnologia que será usada como também ao ramo em que estiver atuando.
 
 
 \section{Custos do BI}
 
-A Tecnologia da Informação é fundamental para o gerenciamento e manutenção correta dos negócios atualmente, ela deve ser vista como um ativo da empresa, que merece investimento em \textit{hardware}, \textit{software} e pessoal capacitado, além dos treinamentos que devem ser dados à medida que a TI expande \cite{negash1}.
+A Tecnologia da Informação (TI) é fundamental para o gerenciamento e manutenção correta dos negócios atualmente, ela deve ser vista como um ativo da instituição em que for aplicada, que merece investimento em \textit{hardware}, \textit{software} e pessoal capacitado, além dos treinamentos que devem ser dados à medida que a TI expande \cite{negash1}.
 
 \begin{itemize}
-	\item \textbf{Hardware} - Os custos relacionados ao \textit{hardware} variam de acordo com a estrutura que a empresa já tiver em mãos, se um \textit{data warehouse} já existe, então a expansão precisa ser feita para um \textit{data mart}, que é uma parte dedicada aos sistemas BI. Dependendo da estrutura pode ser necessária a expansão para um sistema de redes mais robusto, que suporte o tráfego dos dados.
+	\item \textbf{Hardware} - Os custos relacionados ao \textit{hardware} variam de acordo com a estrutura que a instituição já tiver em mãos, se um \textit{data warehouse} já existe, então a expansão precisa ser feita para um \textit{data mart}, que é uma parte dedicada aos sistemas BI. Dependendo da estrutura pode ser necessária a expansão para um sistema de redes mais robusto, que suporte o tráfego dos dados.
 	
-	\item \textbf{Software} - Os \textit{softwares} BI custam alto, mas também possuem muitas funcionalidades, alguns deles como o Power BI tem assinaturas a partir de \$60.000 por ano, como pode ser visto no site da \href{https://powerbi.microsoft.com/en-us/pricing/}{Microsoft}, na cotação atual isso passa de R\$300.000, então pesquisar entre os principais fornecedores do mercado é crucial para ter um preço justo e que atenda às necessidades do cliente.
+	\item \textbf{Software} - Os \textit{softwares} BI possuem um custo elevado, mas também possuem muitas funcionalidades, alguns deles como o Power BI tem assinaturas a partir de \$60.000 por ano, como pode ser visto no site da \href{https://powerbi.microsoft.com/en-us/pricing/}{Microsoft}, na cotação atual isso passa de R\$300.000, então pesquisar entre os principais fornecedores do mercado é crucial para ter um preço justo e que atenda às necessidades do cliente.
 	
 	\item \textbf{Implementação} - Essa categoria é uma extensão da anterior porque está diretamente relacionada. Após a aquisição da ferramenta BI e do \textit{hardware} é necessário, também, realizar um treinamento do pessoal. Esse tipo de gasto também é recorrente, ou seja, sempre vai existir porque à medida que novas pessoas chegam e que o sistema expande, novos treinamentos devem ser realizados. Estima-se que esse tipo de manutenção corresponde a 15\% dos custos.
 	
@@ -97,7 +96,7 @@ Existem muitas ferramentas BI no mercado hoje, com o crescimento da área també
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.40]{./figures/cap1/powerbi.png}
-	\caption{Preço do Power BI Premium \\ fonte: Microsoft}
+	\caption{Preço do Power BI Premium \\ fonte: \url{https://powerbi.microsoft.com/en-us/}}
 \end{figure}
 
 
@@ -106,7 +105,7 @@ Além do Power BI podemos citar o Qlikview, que é usado na JFRN. Ele é desenvo
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.40]{./figures/cap1/qlikview.png}
-	\caption{Qlikview versus Qlik Sense \\ fonte: Qlik}
+	\caption{Qlikview versus Qlik Sense\\ fonte: \url{https://www.qlik.com/us/products/}}
 \end{figure}
 
 

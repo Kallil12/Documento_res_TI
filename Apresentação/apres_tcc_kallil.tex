@@ -68,20 +68,22 @@
 \end{frame}
 
 
-
  %%
- %%  SECTION 1 - BASIC EXAMPLES
- %%
-\section{BI na JFRN}
+\section{Histórico do BI e aplicações na JFRN}
 
-\begin{frame}{Noções gerais}\label{colorpalette}
+\begin{frame}{Desenvolvimento do BI}\label{colorpalette}
 \vspace{8pt}
 Conceitos básicos de \textit{Business Intelligence}
     \begin{itemize}
         \item Termo apresentado em 1865 por Richard Millar Devens
         \item Apareceu novamente em 1958 num artigo de Hans Peter Luhn
-    	\item Difundido em várias instituições
-    	\item Uso da informática para melhorar a gestão dos recursos
+    	\item Difundido em várias instituições - computadores menos caros
+    	\item Uso da informática para suporte às \textbf{tomadas de decisões}
+    	\begin{itemize}
+    		\item Visualização de dados
+    		\item Análise de dados
+    		\item Armazenamento de dados
+    	\end{itemize}
     \end{itemize}
 \end{frame} 
 
@@ -89,26 +91,105 @@ Conceitos básicos de \textit{Business Intelligence}
 \begin{frame}{Aplicação na JFRN}\label{colorpalette}
 \vspace{8pt}
     \begin{itemize}
-    	\item Amplamente usado
-    	\item Acessado através de navegadores
+    	\item Usado por servidores e magistrados
+    	\item Acessado através dos navegadores
     	\item Desenvolvido com Qlikview
     	\item Problemas de entendimento entre painéis
     	\item TRF5 recebe as demandas
     \end{itemize}
 \end{frame} 
 
+
+\begin{frame}{Portal BI}\label{colorpalette}
+	\vspace{8pt}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.25]{./imagens/portal_bi.png}
+		\caption{Portal BI do TRF5}
+	\end{figure}
+\end{frame} 
+
+
+\begin{frame}{Ferramentas disponíveis}\label{colorpalette}
+	\vspace{8pt}
+	As ferramentas mais usadas:
+	\begin{itemize}
+		\item Qlikview
+		\item PowerBI
+		\item Pentaho
+		\item Metabase
+	\end{itemize}
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.40]{./imagens/bi_tools.jpg}
+	\caption{Ferramentas BI}
+\end{figure}
+\end{frame} 
+
 \section{Construção do painel}
+
+\begin{frame}{Escolhendo as ferramentas}\label{colorpalette}
+	\vspace{8pt}
+	Pontos que devem ser levados em consideração na escolha da ferramenta:
+	\begin{itemize}
+		\item Pago vs gratuito
+		\item Pronto vs próprio
+		\item Facilidade de se desenvolver
+	\end{itemize}
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.25]{./imagens/pronto_vs_construido_escolhido.jpg}
+	\caption{Comprado vs construído}
+\end{figure}
+\end{frame} 
+
+\begin{frame}{Prós vs Contras}
+	\vspace{8pt}
+	\begin{itemize}
+		\item Prós: 
+		\begin{itemize}
+			\item Gratuito
+			\item Desenvolvido \textit{in-house}
+			\item Fácil de se encontrar desenvolvedores
+			\item Extremamente customizável
+		\end{itemize}
+	    \item Contras:
+	    \begin{itemize}
+	    	\item Gratuito %não tem garantia
+	    	\item Desenvolvido \textit{in-house} %os problemas tem que ser resolvidos localmente
+	    \end{itemize}
+	\end{itemize}
+\end{frame}
 
 \begin{frame}{Tecnologias usadas}
 \vspace{8pt}
     \begin{itemize}
         \item Python
         \begin{itemize}
-            \item Dash
-            \item Plotly
+            \item Dash - visualização dos dados
+            \item Numpy - análise dos dados
         \end{itemize}
-        \item Qlikview
+        \item Qlikview - conversão dos dados para formato que possa ser lido pelo painel
     \end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.60]{./imagens/fluxo_painel.png}
+		\caption{Fluxo do painel}
+	\end{figure}
+\end{frame}
+
+
+
+\begin{frame}{Visualização de dados}
+	\vspace{8pt}
+	A importância de se ter visualização de dados que seja eficiente
+\end{frame}
+
+\begin{frame}{Análise de dados}
+	\vspace{8pt}
+	Falar sobre correlação e causalidade
+	Lembrar de falar sobre as vendas do Xbox
+    O analista de dados precisa conhecer bem os dados, ter noção do que pode ou não ser um erro é crucial para que a análise seja bem feita, e a ligação entre o time de TI e os gestores das Varas, englobando os magistrados e diretores de Vara, é importante para que as análises sejam corretas
 \end{frame}
 
 \begin{frame}{Estrutura do painel}
@@ -122,7 +203,14 @@ Conceitos básicos de \textit{Business Intelligence}
 
 \section{Detecção de anomalias}
 
-
+\begin{frame}{Distribuição dos dados}
+	\vspace{8pt}
+	\begin{itemize}
+		\item Falar sobre a distribuição dos dados nas Varas
+		\item Falar sobre a técnica usada
+		\item Levantar alternativas
+	\end{itemize}
+\end{frame}
 
 
 {

@@ -67,9 +67,9 @@
 	\hfill	{\large \parbox{.95\textwidth}{\tableofcontents[hideothersubsections]}}
 \end{frame}
 
-
  %%
 \section{Histórico do BI e aplicações na JFRN}
+
 
 \begin{frame}{Desenvolvimento do BI}\label{colorpalette}
 \vspace{8pt}
@@ -143,6 +143,24 @@ Conceitos básicos de \textit{Business Intelligence}
 \end{figure}
 \end{frame} 
 
+\begin{frame}{Python escolhido!}
+	\vspace{8pt}
+	\begin{itemize}
+		\item Linguagem de programação
+		\item Lançada em 1991 por Guido van Rossum
+		\item Sintaxe fácil de ler
+		\item Grande quantidade de bibliotecas \textit{open-source}
+		\item Usado em grandes empresas:
+		\begin{itemize}
+			\item Netflix
+			\item Spotify
+			\item Google
+			\item Instagram
+			\item Facebook
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
 \begin{frame}{Prós vs Contras}
 	\vspace{8pt}
 	\begin{itemize}
@@ -160,6 +178,8 @@ Conceitos básicos de \textit{Business Intelligence}
 	    \end{itemize}
 	\end{itemize}
 \end{frame}
+
+
 
 \begin{frame}{Tecnologias usadas}
 \vspace{8pt}
@@ -179,41 +199,158 @@ Conceitos básicos de \textit{Business Intelligence}
 \end{frame}
 
 
+\begin{frame}{Visualização de dados}
+	\vspace{8pt}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.35]{./imagens/grafico_errado.jpeg}
+		\caption{Gráfico tendencioso}
+	\end{figure}
+\end{frame}
 
 \begin{frame}{Visualização de dados}
 	\vspace{8pt}
-	A importância de se ter visualização de dados que seja eficiente
+	\begin{itemize}
+		\item Mistura de arte com ciência
+		\item Deve transmitir o comportamento dos dados
+		\item Nunca distorcer ou enganar
+		\item Deve apresentar elementos balanceados %disposição de gráficos
+		\item Boa escolha de cores
+	\end{itemize}
+
+	Uma visualização de dados mal feita pode levar a conclusões erradas, resultando em uma má tomada de decisões.
+\end{frame}
+
+\begin{frame}{Visualização de dados}
+	\vspace{8pt}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.50]{./imagens/painel_exemplo.png}
+		\caption{6ª Vara em 2015}
+	\end{figure}
 \end{frame}
 
 \begin{frame}{Análise de dados}
 	\vspace{8pt}
-	Falar sobre correlação e causalidade
-	Lembrar de falar sobre as vendas do Xbox
-    O analista de dados precisa conhecer bem os dados, ter noção do que pode ou não ser um erro é crucial para que a análise seja bem feita, e a ligação entre o time de TI e os gestores das Varas, englobando os magistrados e diretores de Vara, é importante para que as análises sejam corretas
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.40]{./imagens/analise_dados.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Análise de dados}
+	\vspace{8pt}
+	\begin{itemize}
+		\item Entender o comportamento
+		\item Relacionar com os negócios
+		\item A análise NÃO é isolada, precisa de integração entre diferentes áreas e disciplinas
+		\item Está ligada à visualização de dados
+		\item É importante entender as causas de determinados comportamentos
+	\end{itemize}
+    
+    Correlação e Causalidade
+\end{frame}
+
+\begin{frame}{Análise de dados - exemplo}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.55]{./imagens/xbox_vendas.png}
+	\end{figure}
+É importante entender a causa do comportamento observado nos dados para poder agir melhor.
 \end{frame}
 
 \begin{frame}{Estrutura do painel}
 \vspace{8pt}
+Em linhas gerais a estrutura do painel fica da seguinte forma:
     \begin{itemize}
-        \item Carregamento dos dados em formato .csv
-        \item Ajuste dos dados
-        \item Visualização
+        \item Carregamento dos dados em formato .csv, convertido pelo Qlikview
+        \begin{itemize}
+        	\item O QlikView possui um formato próprio de calcular o tempo, e ele é necessário porque os dados do TRF5 são tratados nele
+        \end{itemize}
+        \item Filtragem dos dados, pegando a partir de 2014 e removendo \textit{Null}
+        \begin{itemize}
+        	\item Alguns dados são carregados com problemas, seja no número do processo, seja na data, eles precisam ser removidos para não atrapalharem a análise e visualização dos dados
+        \end{itemize}
+        \item Associação dos dados com a filtragem feita pelo usuário do painel
+        \begin{itemize}
+        	\item Nesse ponto a visualização é gerada e apresentada de acordo com o que o usuário escolher (combinação de Vara e Ano)
+        \end{itemize}
     \end{itemize}
+É importante lembrar que as análises são dinâmicas, ou seja, as médias e o que é considerado anômalo muda de acordo com o período selecionado.
 \end{frame}
 
 \section{Detecção de anomalias}
 
-\begin{frame}{Distribuição dos dados}
+\begin{frame}{Objetivo da detecção de anomalias}
 	\vspace{8pt}
 	\begin{itemize}
-		\item Falar sobre a distribuição dos dados nas Varas
-		\item Falar sobre a técnica usada
-		\item Levantar alternativas
+		\item Detecção de valores destoantes
+		\item Análise pelo Centro de Inteligência
+		\begin{itemize}
+			\item O Centro de Inteligência trabalha para diminuir a multiplicação das demandas repetitivas, evitando uma sobrecarga na JFRN
+		\end{itemize}
 	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.20]{./imagens/detectando_anomalia.png}
+	\end{figure}
 \end{frame}
 
+\begin{frame}{Distribuição dos dados}
+	\vspace{8pt}
+	Existem diversos métodos de detecção de anomalias, mas eles quase sempre são focados em distribuição normal.
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.50]{./imagens/dist_normal.png}
+	\end{figure}
+\end{frame}
 
-{
+\begin{frame}{Distribuição dos dados}
+	\vspace{80pt}
+	As Varas apresentam um comportamento um pouco diferente por causa das competências.
+\end{frame}
+
+\begin{frame}{Distribuição dos dados}
+	\begin{enumerate}
+		\item Dívida ativa - 594
+		\item Profissional - 266
+		\item Competência da Justiça Federal - 111
+		\item Efeito Suspensivo/Impugnação/Embargos à Execução - 102
+	\end{enumerate}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.50]{./imagens/Vara_6_fevereiro_2015.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Distribuição dos dados}
+	\begin{enumerate}
+		\item Vícios de Construção - 232
+		\item Contratos Bancários - 94
+	\end{enumerate}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.50]{./imagens/Vara_4_junho_2016.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Distribuição dos dados}
+	\begin{enumerate}
+		\item Competência da Justiça Federal - 47
+		\item Pena de Multa - 41
+		\item Prestação de Serviços à Comunidade - 29
+	\end{enumerate}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.50]{./imagens/Vara_14_julho_2018.png}
+	\end{figure}
+\end{frame}
+
+\section{Conclusões}
+
+\begin{frame}{Conclusões}
+	As ferramentas gratuitas e o time de TI podem contribuir bastante para a gestão da JFRN, gerando análises que auxiliem os magistrados e servidores da Justiça a ter uma melhor visão do funcionamento das Varas e sem pagar por licenças de \textit{software}. Além disso, os painéis poderiam ser desenvolvidos e distribuídos usando o pessoal e a infraestrutura da JFRN. A manutenção dessas ferramentas também é simples porque usam Python, uma das linguagens de programação mais usadas no mundo todo e relativamente fácil de se aprender.
+\end{frame}
 
 \setbeamercolor{background canvas}{bg=gray}
 \begin{frame}[c,plain]{}
@@ -221,7 +358,6 @@ Conceitos básicos de \textit{Business Intelligence}
     \textcolor{white}{Obrigado!}
 \end{frame}
 
-}
 
 
 

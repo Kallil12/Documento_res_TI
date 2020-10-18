@@ -21,7 +21,18 @@ Desenvolvedores podem aprender rapidamente
 Normalmente envolve pouco código
 Sintaxe é fácil de ler
 Python tem sido utilizada por grandes empresas de tecnologia (listar)
+ - netflix
+ - google
+ - Instagram
+ - facebook
+ - spotify
 Grande quantidade de bibliotecas open-source
 
 
 parte 3
+
+A detecção de anomalias serve para encontrar valores que sejam muito diferentes do que é mais frequente no conjunto de dados, normalmente esses valores recebem algum tratamento ou são até excluídos, pois dependendo da análise que se faça eles podem causar um impacto forte em algumas medidas, como a média. O objetivo do Painel do Centro de Inteligência é encontrar justamente o que for anômalo.
+
+A maioria das técnicas de encontar anomalias são feitas para dados normalizados, então mesmo com uma distribuição positiva ou negativa ocorre a normalização para se aplicar as técnicas. Mas, quando aplicadas aos dados da JFRN não resultaram em boas conclusões porque não há uma grande variação de dados e o que era anômalo se perdia, então uma forma diferente foi desenvolvida.
+
+Calculando a média de processos que entram e encontrando o desvio padrão, é possível encontar quais são os tipos de assuntos mais frequentes em cada Vara, e dividir por cores, permitindo que seja fácil entender quais são os mais frequentes em três níveis diferentes.

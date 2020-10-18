@@ -247,8 +247,6 @@ Conceitos básicos de \textit{Business Intelligence}
 		\item Está ligada à visualização de dados
 		\item É importante entender as causas de determinados comportamentos
 	\end{itemize}
-    
-    Correlação e Causalidade
 \end{frame}
 
 \begin{frame}{Análise de dados - exemplo}
@@ -343,6 +341,50 @@ Em linhas gerais a estrutura do painel fica da seguinte forma:
 	\begin{figure}
 		\centering
 		\includegraphics[scale=0.50]{./imagens/Vara_14_julho_2018.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Distribuição dos dados}
+	\begin{enumerate}
+		\item Competência da Justiça Federal - 47
+		\item Pena de Multa - 41
+		\item Prestação de Serviços à Comunidade - 29
+	\end{enumerate}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.50]{./imagens/Vara_14_julho_2018.png}
+	\end{figure}
+\end{frame}
+
+
+
+\begin{frame}{Encontrando os Assuntos mais frequentes}
+	
+	A definição do que seria uma anomalia passou a levar em consideração a frequência dos Assuntos e a distância dele em relação à média. Então, a partir disso foram elaborados três níveis diferentes: 
+	\begin{itemize}
+		
+		\item $media_{assuntos}$ que é a média simples dos assuntos, a cada dois anos:
+		$media_{assuntos} = \sum\limits_{ano}^{ano-1}\frac{assuntos}{total_{meses}}$
+		
+		\item $anomalia_2$ definida como: $anom_2 = media_{assuntos} + (2*\sigma)$
+		
+		\item $anomalia_1$ definida como: $anom_1 = media_{assuntos} + \sigma$
+		
+		\begin{itemize}
+			\item Vermelho \text{se $total \geq anom_2$}\\
+			\item Amarelo \text{se $total \geq anom_1 \;e\; total < anom_2$}\\
+			\item Verde \text{se $total \geq media_{assuntos} \;e\; total < anom_1$}
+		\end{itemize}
+		
+		\end{itemize}
+\end{frame}
+
+\begin{frame}{Distribuição dos dados}
+	\centering
+	Resultado:
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.50]{./imagens/exemplo_final.png}
 	\end{figure}
 \end{frame}
 
